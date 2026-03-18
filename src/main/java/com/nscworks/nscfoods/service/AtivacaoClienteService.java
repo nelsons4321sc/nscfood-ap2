@@ -1,0 +1,27 @@
+package com.nscworks.nscfoods.service;
+
+import org.springframework.stereotype.Component;
+
+import com.nscworks.nscfoods.modelo.Cliente;
+import com.nscworks.nscfoods.noticacao.Notificar;
+
+//se torna um bean gerenciável pelo spring
+@Component
+public class AtivacaoClienteService {
+	
+	private Notificar notificador;
+
+	// para injetar um bean no outro, cria-se um cosntrutor e que que recebe 
+	//como parametro o notificador
+	public AtivacaoClienteService(Notificar notificador) {
+		this.notificador = notificador;
+		System.out.println("AtivacaoClienteService "+ notificador);
+	}
+	
+	public void ativar(Cliente cliente) {
+		cliente.ativar();
+		
+		this.notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
+	}
+
+}
