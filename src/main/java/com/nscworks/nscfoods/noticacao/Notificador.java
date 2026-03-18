@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import com.nscworks.nscfoods.modelo.Cliente;
 
 // se torna um bean gerenciável pelo spring
-@Component
+//@Component
 public class Notificador implements Notificar {
 	
 	private boolean caixaAlta;
