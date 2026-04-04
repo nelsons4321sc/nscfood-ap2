@@ -7,7 +7,7 @@ import com.nscworks.nscfoods.noticacao.Notificador;
 
 
 // se torna um bean gerenciável pelo spring
- @Component
+ // @Component
 public class AtivacaoClienteService {
 	
 	private Notificador notificador;
