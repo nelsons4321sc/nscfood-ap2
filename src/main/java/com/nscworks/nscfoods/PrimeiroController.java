@@ -11,23 +11,23 @@ import com.nscworks.nscfoods.service.AtivacaoClienteService;
 public class PrimeiroController {
 	
 	// Injetando o bean
-	private AtivacaoClienteService ativacaoClienteService;
-		
+	//private AtivacaoClienteService ativacaoClienteService;
+	/*	
 	public PrimeiroController(AtivacaoClienteService ativacaoClienteService) {
 		this.ativacaoClienteService = ativacaoClienteService;
 		
 		System.out.println("PrimeiroController: "+ ativacaoClienteService);
 	}
-
+*/
 
 
 	@GetMapping("ola")
 	@ResponseBody
 	public String hello() {
 		
-		Cliente joao = new Cliente("João", "joao@gmail.com","32565985");
+		//Cliente joao = new Cliente("João", "joao@gmail.com","32565985");
 		
-		ativacaoClienteService.ativar(joao);
+		// ativacaoClienteService.ativar(joao);
 		
 		return "Olá";
 	}

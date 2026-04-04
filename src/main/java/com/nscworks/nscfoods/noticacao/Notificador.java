@@ -1,21 +1,37 @@
 package com.nscworks.nscfoods.noticacao;
 
+
 import org.springframework.stereotype.Component;
+
 import com.nscworks.nscfoods.modelo.Cliente;
 
-// se torna um bean gerenciável pelo spring
-//@Component
-public class Notificador implements Notificar {
+@Component
+public class Notificador {
 	
-	private boolean caixaAlta;
-	private String hostServidorSmtp;
-	
+	public Notificador() {
+		System.out.println("Chamando o construtor com bean gerenciável");
 
-	public Notificador(String hostServidoerSmtp) {
-		this.hostServidorSmtp = hostServidoerSmtp;
-		System.out.println("Notificador");
 	}
 	
+	public void notificar(Cliente cliente, String mensagem) {
+		System.out.printf("Notificando %s através do email %s: %s\n",
+				cliente.getNome(), cliente.getEmail(), mensagem);
+	}
+
+	
+	// private boolean caixaAlta;
+	// private String hostServidorSmtp;
+	
+/*
+	public Notificador(Cliente cliente, String mensagem) {
+		//this.hostServidorSmtp = hostServidoerSmtp;
+		System.out.printf("Notificando %s através do email %s: %s\n",
+				cliente.getNome(), cliente.getEmail(), mensagem);
+		
+		
+	}
+	
+	/*
 	@Override
 	public void notificar(Cliente cliente, String mensagem) {
 		
@@ -31,6 +47,7 @@ public class Notificador implements Notificar {
 		this.caixaAlta = caixaAlta;
 	}
 	
+	*/
 	
 
 }
