@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.nscworks.nscfoods.modelo.Cliente;
 import com.nscworks.nscfoods.service.AtivacaoClienteService;
 
-@Controller
+//@Controller
 public class PrimeiroController {
 	
 	// Injetando o bean
