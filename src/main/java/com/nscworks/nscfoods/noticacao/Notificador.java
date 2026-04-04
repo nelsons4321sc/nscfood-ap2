@@ -9,7 +9,8 @@ import com.nscworks.nscfoods.modelo.Cliente;
 public class Notificador {
 	
 	public Notificador() {
-		System.out.println("Construtor chamado");
+		System.out.println("Chamando o construtor com bean gerenciável");
+
 	}
 	
 	public void notificar(Cliente cliente, String mensagem) {
