@@ -3,14 +3,14 @@ package com.nscworks.nscfoods.service;
 import org.springframework.stereotype.Component;
 
 import com.nscworks.nscfoods.modelo.Cliente;
-import com.nscworks.nscfoods.noticacao.Notificador;
+import com.nscworks.nscfoods.noticacao.NotificadorEmail;
 
 @Component
 public class AtivacaoClienteService {
 	
-	private Notificador notificador;
+	private NotificadorEmail notificador;
 	
-	public AtivacaoClienteService(Notificador notificador) {
+	public AtivacaoClienteService(NotificadorEmail notificador) {
 		this.notificador = notificador;
 		System.out.println("Chamando o construtor AtivacaoClienteService "+ notificador);
 	}

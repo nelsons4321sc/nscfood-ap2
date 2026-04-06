@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 import com.nscworks.nscfoods.modelo.Cliente;
 
 @Component
-public class Notificador {
+public class NotificadorEmail {
 	
-	public Notificador() {
+	public NotificadorEmail() {
 		System.out.println("Chamando o construtor Notificador");
 	}
 	
