@@ -8,17 +8,17 @@ import com.nscworks.nscfoods.noticacao.NotificadorEmail;
 // é para servir como definição de beans
 @Configuration
 public class AlgaConfig {
-	/*
+
 	@Bean
-	public Notificador notificadorEmail() {
+	public NotificadorEmail notificadorEmail() {
 		
-		//Notificador notificador = new Notificador("smtp.nscmail.com");
-		//notificador.setCaixaAlta(true);
+		NotificadorEmail notificador = new NotificadorEmail("smtp.nscmail.com");
+		notificador.setCaixaAlta(true);
 		
-		//return notificador;
+		return notificador;
 		
 	}
-	*/
+	
 	
 
 }

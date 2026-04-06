@@ -1,15 +1,14 @@
 package com.nscworks.nscfoods.noticacao;
 
-import org.springframework.stereotype.Component;
-
 import com.nscworks.nscfoods.modelo.Cliente;
 
-@Component
 public class NotificadorEmail implements Notificador {
 	
 	private boolean caixaAlta;
+	private String hostServidorSMTP;
 	
-	public NotificadorEmail() {
+	public NotificadorEmail(String hostServidorSMTP) {
+		this.hostServidorSMTP = hostServidorSMTP;
 		System.out.println("Chamando o construtor Notificador");
 	}
 	
@@ -21,8 +20,8 @@ public class NotificadorEmail implements Notificador {
 			mensagem = mensagem.toUpperCase();
 		}
 		
-		System.out.printf("Notificando %s através do email %s: %s\n",
-				cliente.getNome(), cliente.getEmail(), mensagem);
+		System.out.printf("Notificando %s através do email %s, usando SMTP %s: %s\n",
+				cliente.getNome(), cliente.getEmail(), this.hostServidorSMTP, mensagem);
 	}
 
 
